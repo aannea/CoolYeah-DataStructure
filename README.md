@@ -66,3 +66,75 @@ This program performs basic matrix operations. Here's a breakdown of the program
 - The program calculates the inverse of the matrix by dividing each element of matrix2 by the determinant and assigns the result to invers.
 - The program displays the inverse matrix.
 - The program ends with the return 0; statement.
+
+### 006_ArrayThreeDimension.cpp
+This program demonstrates the use of a three-dimensional array to store and display integer values. Here's a breakdown of the program:
+- The necessary header file, iostream, is included.
+- The main() function is the entry point of the program.
+- Inside main(), a three-dimensional array arr is declared with dimensions 2x3x4.
+- The array is initialized with values using nested initializer lists.
+- A set of nested loops is used to iterate over each element of the array.
+- The program prints the value of each element using cout.
+- The program includes newline characters to format the output in a grid-like pattern.
+- The program ends with the return 0; statement.
+
+### 007_ArrayMultiDimension.cpp
+This program demonstrates the input and output of elements in a three-dimensional array. Here's a breakdown of the program:
+- The necessary header file, iostream, is included.
+- The program enters the main() function, which serves as the entry point.
+- Inside main(), a three-dimensional array arr with dimensions 2x2x2 is declared.
+- The program uses nested loops to iterate over each element of the array for input.
+- The user is prompted to enter the value for each element, and it is stored in the corresponding position in the array.
+- The program uses nested loops again to iterate over each element of the array for output.
+- The program prints the value of each element along with its indices.
+- The program includes newline characters for formatting.
+- Another set of nested loops is used to display the array without indices.
+- The program ends with the return 0; statement.
+
+### 008_ArrayMultidimensionMaximum.cpp
+This program allows the user to input values into a three-dimensional array and then finds the maximum value among those elements. Here's a breakdown of the program:
+- The necessary header file, iostream, is included.
+- The program enters the main() function, which serves as the entry point.
+- Inside main(), the variables a, b, c, d, and e are declared. a is initialized to 0, b is the three-dimensional array, and c is used to store the maximum value.
+- The program uses nested loops to iterate over each element of the array for input.
+- The user is prompted to enter the value for each element, and it is stored in the corresponding position in the array.
+- After the input is complete, the program initializes c with the first element of the array, b[0][0][0].
+- The program uses nested loops again to iterate over each element of the array for finding the maximum value.
+- If a greater value is found, it is assigned to c.
+- Once all elements are checked, the program outputs the maximum value stored in c.
+- The program ends with the return 0; statement.
+
+### 009_ArrayMultiDimensionVariableSize.cpp
+This program allows the user to input values into a three-dimensional array of variable size. Here's a breakdown of the program:
+- The necessary header file, iostream, is included.
+- The program enters the main() function, which serves as the entry point.
+- Inside main(), the variables a, b, c, e, f, g, and h are declared. a, b, and c represent the dimensions of the array, and e, f, and g are used as loop counters.
+- The program prompts the user to enter the dimensions of the array (a, b, c).
+- An array d of size a x b x c is declared.
+- The program uses nested loops to iterate over each element of the array for input.
+- The user is prompted to enter the value for each element, and it is stored in the corresponding position in the array.
+- After the input is complete, the program uses nested loops again to iterate over each element of the array for output.
+- The program displays the value of each element to the user.
+- Finally, the program displays the array in a matrix-like format.
+- The program ends with the return 0; statement.
+
+### 010_ArrayMatrixCalculator.cpp
+This program is a calculator for matrix operations. It provides options for matrix addition, subtraction, multiplication, and transposition. Here's a breakdown of the program:
+- The necessary header file, <iostream>, is included.
+- The using namespace std; directive is used to avoid having to prefix standard library elements with std::.
+- Global variables a, b, c, e, f, g, i, and k are declared to hold various values and serve as loop counters.
+- The program defines a menu label to be used for looping back to the main menu.
+- The program displays a menu with options for different matrix operations.
+- The user is prompted to select an option (k).
+- Depending on the selected option, the program executes the corresponding code block using a switch statement.
+- For each operation, the program prompts the user to input the dimensions of the matrix (a, b, c).
+- An array d of size a x b x c is declared to hold the matrix elements.
+- Additional arrays h and j are declared for intermediate calculations during matrix addition, subtraction, and multiplication.
+- The program uses nested loops to input the values of the matrix elements.
+- After the input is complete, the program displays the matrix elements to the user.
+- Depending on the selected operation, the program performs the corresponding matrix calculation using nested loops and stores the result in the appropriate array (h or j).
+- The program displays the result of the matrix operation to the user.
+- The program pauses execution and waits for the user to press any key before returning to the main menu.
+- The program uses the goto statement to jump back to the menu label and repeat the process.
+- The default case in the switch statement handles the situation where an invalid option is selected, causing the program to exit.
+- The program ends with the return 0; statement.
