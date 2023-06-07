@@ -268,3 +268,74 @@ This program allows the user to input 10 integers into an array, display the val
 - Within this loop, the program prints the index b and the corresponding value a[b].
 - The loop increments the value of b after each iteration.
 - Once the loop completes, the program exits the loop and the main() function ends with the return 0; statement, indicating successful program execution.
+
+### 018_Struct.cpp
+This program demonstrates the usage of a structure in C++ to represent and store information about two students. Here's how the code works:- 
+- The necessary header file, \<iostream>, is included.
+- The using namespace std; directive is used to avoid having to prefix standard library elements with std::.
+- The main() function is defined as the entry point of the program.
+- A structure named mahasiswa is defined, which contains four member variables: nim (student ID), nama (name), alamat (address), and jurusan (major).
+- Two instances of the mahasiswa structure, a and b, are declared.
+- The member variables of a and b are assigned specific values using the dot operator.
+- The program then prints the details of student a using cout statements, accessing the member variables using the dot operator.
+- A blank line is printed.
+- The program then prints the details of student b using cout statements, again accessing the member variables using the dot operator.
+- Finally, the program exits the main() function with the return 0; statement, indicating successful program execution.
+
+### 019_StructArray.cpp
+This program demonstrates the usage of an array of structures in C++. Here's how the code works:
+- The necessary header file, \<iostream>, is included.
+- The using namespace std; directive is used to avoid having to prefix standard library elements with std::.
+- The main() function is defined as the entry point of the program.
+- A structure named pegawai is defined, which contains three member variables: nama (name), alamat (address), and gaji (salary).
+- An array of pegawai structures named pl is declared with a size of 3.
+- Three instances of the pegawai structure, {"Budi", "Purwokerto", 35000000}, {"Andre", "Tegal", 50000000}, and {"Rini", "Bandung", 40000000}, are assigned to the elements of the pl array during initialization.
+- The address of the first element of the pl array is accessed using pl[0] and the alamat member is modified to "Banyumas".
+- A for loop is used to iterate over the elements of the pl array.
+- Inside the loop, the details of each pegawai structure are printed using cout statements, accessing the member variables using the dot operator.
+- A blank line is printed after each iteration of the loop.
+- Finally, the program exits the main() function with the return 0; statement, indicating successful program execution.
+
+### 020_StructNested.cpp
+This program demonstrates the usage of nested structures in C++. Here's how the code works:
+- The necessary header file, \<iostream>, is included.
+- The using namespace std; directive is used to avoid having to prefix standard library elements with std::.
+- Two structure definitions are provided: fakultas (faculty) and jurusan (department).
+- The fakultas structure contains two member variables: namafakultas (faculty name) and kodefakultas (faculty code).
+- The jurusan structure contains three member variables: faculty (an instance of the fakultas structure), namajurusan (department name), and kelas (class).
+- An instance of the fakultas structure named f1 is created.
+- An instance of the jurusan structure named j1 is created.
+- The namafakultas member variable of f1 is assigned the value "Informatika", and the kodefakultas member variable is assigned the value "IF".
+- The namafakultas member variable of j1.faculty (the nested fakultas structure within j1) is assigned the value "Informatika". The namajurusan member variable of j1 is assigned the value "Teknik Informatika", and the kelas member variable is assigned the value "IFB".
+- The program prints the values of the member variables using cout statements.
+- The program exits the main() function with the return 0; statement, indicating successful program execution.
+
+### 021_StructNestedFauna.cpp
+This program demonstrates the usage of nested structures in C++ to represent different types of animals. Here's how the code works:
+- The necessary header file, \<iostream>, is included.
+- The using namespace std; directive is used to avoid having to prefix standard library elements with std::.
+- Two structure definitions are provided: hewan (animal), hewan_darat (land animal), and hewan_laut (sea animal).
+- The hewan structure contains member variables representing various characteristics of an animal.
+- The hewan_darat structure contains a nested hewan structure as well as additional member variables specific to land animals.
+- The hewan_laut structure contains a nested hewan structure as well as additional member variables specific to sea animals.
+- Instances of hewan_darat and hewan_laut structures named hd1 and hl1 are created, respectively.
+- The member variables of the structures are assigned values using initializer lists.
+- The program prints the information about the land animal (hd1) and sea animal (hl1) using cout statements.
+- The program exits the main() function with the return 0; statement, indicating successful program execution.
+
+### 022_StructArayMart.cpp
+This program allows the user to input information about 10 different items in a store and displays the collected data. Here's how the code works:
+- The necessary header file, <iostream>, is included.
+- The using namespace std; directive is used to avoid having to prefix standard library elements with std::.
+- An integer variable a is declared to control the loop.
+- The toko structure is defined, which represents the attributes of a store item, such as its code, name, stock quantity, and price.
+- An array of toko structures named isitok is created to store information about 10 items.
+- A loop is initiated to collect data for each item:
+- The user is prompted to enter the code, name, stock quantity, and price of the item.
+- The input values are stored in the corresponding member variables of the isitok array at index a.
+- The system("pause") and system("cls") statements are used to pause the program and clear the screen before collecting data for the next item.
+- The loop iterates until data for all 10 items is collected.
+- After the data is collected, the program displays the information of all the items using another loop:
+- The loop iterates through each item in the isitok array.
+- The code, name, stock quantity, and price of each item are printed using cout statements.
+- The program exits the main() function with the return 0; statement, indicating successful program execution.
