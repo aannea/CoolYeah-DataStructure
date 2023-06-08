@@ -325,7 +325,7 @@ This program demonstrates the usage of nested structures in C++ to represent dif
 
 ### 022_StructArayMart.cpp
 This program allows the user to input information about 10 different items in a store and displays the collected data. Here's how the code works:
-- The necessary header file, <iostream>, is included.
+- The necessary header file, \<iostream>, is included.
 - The using namespace std; directive is used to avoid having to prefix standard library elements with std::.
 - An integer variable a is declared to control the loop.
 - The toko structure is defined, which represents the attributes of a store item, such as its code, name, stock quantity, and price.
@@ -339,3 +339,76 @@ This program allows the user to input information about 10 different items in a 
 - The loop iterates through each item in the isitok array.
 - The code, name, stock quantity, and price of each item are printed using cout statements.
 - The program exits the main() function with the return 0; statement, indicating successful program execution.
+
+### 023_LinkedList.cpp
+This program demonstrates the implementation of a singly linked list in C++. The linked list operations such as inserting at the beginning and end, deleting from the beginning and end, and displaying the list are implemented using functions. Here's how the code works:
+- The necessary header file, \<iostream>, is included.
+- The using namespace std; directive is used to avoid having to prefix standard library elements with std::.
+- The Node struct is defined, representing a node in the linked list. It contains an integer data and a pointer next to the next node.
+- Two global pointers head and tail are declared to keep track of the first and last nodes of the linked list, respectively.
+- The init() function initializes the head and tail pointers to NULL, indicating an empty list.
+- The isEmpty() function checks whether the linked list is empty by verifying if the head pointer is NULL.
+- The insertDepan() function inserts a new node at the beginning of the list. It creates a new node, assigns the given value to its data member, and updates the head pointer accordingly.
+- The insertBelakang() function inserts a new node at the end of the list. It creates a new node, assigns the given value to its data member, and updates the tail pointer accordingly.
+- The hitunglist() function counts the number of nodes in the linked list and returns the count.
+- The insertTengah() function inserts a new node at a specified position in the list. It checks whether the position is within the valid range and handles the cases for inserting at the beginning, middle, and end of the list.
+- The hapusdepan() function deletes the first node from the list. It checks if the list is empty and updates the head pointer accordingly.
+- The hapusbelakang() function deletes the last node from the list. It checks if the list is empty and updates the tail pointer accordingly.
+- The hapustengah() function deletes a node at a specified position in the list. It checks whether the position is within the valid range and handles the cases for deleting at the beginning, middle, and end of the list.
+- The ubahdepan() function modifies the value of the first node in the list. It checks if the list is empty and updates the data member of the head node.
+- The ubahtengah() function modifies the value of a node at a specified position in the list. It checks whether the position is within the valid range and updates the data member of the corresponding node.
+- The ubahbelakang() function modifies the value of the last node in the list. It checks if the list is empty and updates the data member of the tail node.
+- The clearlist() function deletes all nodes in the list, freeing the memory allocated for each node.
+- The tampil() function displays the data stored in each node of the list by traversing the linked list and printing the data member of each node.
+- In the main() function:
+  - The init() function is called to initialize the list.
+  - Various operations such as inserting at the beginning and end, deleting from the beginning and end, and displaying the list are performed to demonstrate the functionality of the linked list.
+  - The tampil() function is called after each operation to display the updated list.
+  - The program exits the main() function with the return 0; statement, indicating successful program execution.
+
+### 024_LinkedListMenu.cpp
+code you provided is an implementation of a menu-driven program that allows users to interact with the linked list. Here's a breakdown of how the code works:- 
+- The necessary header file, \<iostream>, is included.
+- The using namespace std; directive is used to avoid having to prefix standard library elements with std::.
+- The Node struct is defined, representing a node in the linked list. It contains an integer data and a pointer next to the next node.
+- Two global pointers head and tail are declared to keep track of the first and last nodes of the linked list, respectively.
+- The init() function initializes the head and tail pointers to NULL, indicating an empty list.
+- The isEmpty() function checks whether the linked list is empty by verifying if the head pointer is NULL.
+- The insertDepan() function inserts a new node at the beginning of the list. It creates a new node, assigns the given value to its data member, and updates the head pointer accordingly.
+- The insertBelakang() function inserts a new node at the end of the list. It creates a new node, assigns the given value to its data member, and updates the tail pointer accordingly.
+- The hitunglist() function counts the number of nodes in the linked list and returns the count.
+- The insertTengah() function inserts a new node at a specified position in the list. It checks whether the position is within the valid range and handles the cases for inserting at the beginning, middle, and end of the list.
+- The hapusdepan() function deletes the first node from the list. It checks if the list is empty and updates the head pointer accordingly.
+- The hapusbelakang() function deletes the last node from the list. It checks if the list is empty and updates the tail pointer accordingly.
+- The hapustengah() function deletes a node at a specified position in the list. It checks whether the position is within the valid range and handles the cases for deleting at the beginning, middle, and end of the list.
+- The ubahdepan() function modifies the value of the first node in the list. It checks if the list is empty and updates the data member of the head node.
+- The ubahtengah() function modifies the value of a node at a specified position in the list. It checks whether the position is within the valid range and updates the data member of the corresponding node.
+- The ubahbelakang() function modifies the value of the last node in the list. It checks if the list is empty and updates the data member of the tail node.
+- The clearlist() function deletes all nodes in the list, freeing the memory allocated for each node.
+- The tampil() function displays the data stored in each node of the list by traversing the linked list and printing the data member of each node.
+- The main() function is where the menu-driven program logic is implemented:
+  - The init() function is called to initialize the list.
+  - A do-while loop is used to repeatedly display the menu and process user input until the user chooses to exit.
+  - The available menu options include inserting at the beginning and end, deleting from the beginning and end, displaying the list, clearing the list, and exiting the program.
+  - Based on the user's menu choice, the corresponding functions are called to perform the desired operations.
+  - The loop continues until the user chooses to exit.
+- The program returns 0 to indicate successful execution.
+
+### 025_LinkedListMenuStudent.cpp
+The code you provided is an implementation of a linked list program that allows users to input, add, delete, and display data in the list. Here's a breakdown of how the code works:
+- The necessary header file, \<iostream>, is included.
+- The Node struct is defined, representing a node in the linked list. It contains a string nama, an integer nim, and a pointer next to the next node.
+- Global variables head, tail, bantu, newNode, del, pilih, and out are declared. These variables will be used to manage the linked list and user input.
+- The inputList() function is defined to initialize the list. It prompts the user to enter a name and an integer, creates a new node with the provided data, and assigns it to the head pointer.
+- The tambahDepan() function is defined to add a new node at the beginning of the list. It prompts the user to enter a name and an integer, creates a new node with the provided data, and updates the head pointer accordingly.
+- The tambahBelakang() function is defined to add a new node at the end of the list. It prompts the user to enter a name and an integer, creates a new node with the provided data, and updates the tail pointer accordingly.
+- The panjangList() function calculates the length of the list by traversing through the nodes and counting them. It returns the count.
+- The tampil() function is defined to display the data stored in each node of the list. It traverses the linked list and prints the nama and nim values of each node.
+- The hapusData() function is defined to delete a node from the list. It prompts the user to enter the position of the node they want to delete. Based on the provided position, it handles cases for deleting the first, middle, and last nodes of the list.
+- The main() function is where the menu-driven program logic is implemented:
+  - A menu label is defined to enable jumping to the menu section after performing an operation.
+  - The program displays the menu options to the user.
+  - The user is prompted to enter a choice.
+  - Based on the choice, the corresponding functions are called to perform the desired operations.
+  - After each operation, the program pauses and clears the screen before displaying the menu again.
+  - The program continues executing until the user enters an invalid choice (default case), at which point it exits.
