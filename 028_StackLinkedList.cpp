@@ -2,102 +2,131 @@
 
 using namespace std;
 
-const int n=5;
-int stack[n];
-int top = -1;
+/// PROGRAM STACK DENGAN SINGLE LINKED LIST
+struct Node
+{
+    int data;
+    Node *link;
+};
+Node *top = NULL;
 
-int isEmpty(){
-    if(top == -1)
+int isEmpty()
+{
+    if (top == NULL)
         return 1;
     else
         return 0;
 }
 
-int isFull(){
-    if(top == n-1)
-        return 1;
-    else
-        return 0;
+// Insert Data (Push)
+void push(int nilai)
+{
+    Node *ptr = new Node();
+    ptr->data = nilai;
+    ptr->link = top;
+    top = ptr;
+    cout << " Data " << nilai << " telah dimasukkan" << endl;
 }
 
-void push(int data){
-    if(isEmpty()==1){
-        top++;
-        stack[top] = data;
-        cout <<" Data " << data << " Telah dimasukkan" << endl;
-    }
-    else if (isFull()==0){
-        top++;
-        stack[top]= data;
-        cout << " Data " << data << " Telah dimasukkan" << endl;
-    }
-    else{
-        cout << " Stack penuh!" << endl;
-    }
-}
-
-void pop(){
-    if(isEmpty()==0){
-        top--;
-        cout << " DAta teratas terambil" << endl;
-    }
-    else{
+// Hapus Data (Pop)
+void pop()
+{
+    if (isEmpty() == 1)
         cout << " Stack masih kosong!" << endl;
+    else
+    {
+        Node *ptr = top;
+        top = top->link;
+        cout << " Data " << ptr->data << " terambil" << endl;
+        delete (ptr);
     }
 }
 
-void display(){
-    if(isEmpty()==0){
-        for(int i = top; i>=0; i--){
-            cout << " " << stack[i] << endl;
+// Tampilkan data teratas (Top)
+void showTop()
+{
+    if (isEmpty() == 1)
+        cout << " Stack masih kosong!" << endl;
+    else
+        cout << " Data teratas (top) : " << top->data << endl;
+}
+
+// Hapus Stack
+void clearStack()
+{
+    Node *bantu, *hapus;
+    bantu = top;
+    while (bantu != NULL)
+    {
+        hapus = bantu;
+        bantu = bantu->link;
+        delete hapus;
+    }
+    top = NULL;
+    cout << "Stack berhasil terhapus!" << endl;
+}
+
+// Tampilkan Stack
+void displayStack()
+{
+    if (isEmpty() == 1)
+        cout << " Stack masih kosong!" << endl;
+    else
+    {
+        Node *temp = top;
+        while (temp != NULL)
+        {
+            cout << " " << temp->data << " ";
+            temp = temp->link;
         }
+        cout << endl;
     }
-    else{
-        cout << " Stack masih kosong!" << endl;
-    }
-}
-
-void clear(){
-    top = -1;
-    cout << " Stack berhasil dihapus" << endl;
 }
 
 int main()
 {
     int pilihan, nilai;
-
-    do{
+    do
+    {
         system("cls");
-        cout << " === Menu ===" << endl;
-        cout << " 1. Memasukkan data(Push)" << endl;
+        cout << "=== Menu ===" << endl;
+        cout << " 1. Memasukkan data (Push)" << endl;
         cout << " 2. Menghapus data (Pop)" << endl;
-        cout << " 3. Menampilkan data" << endl;
-        cout << " 4. Hapus Stack" << endl;
-        cout << " 5. Keluar " << endl;
-        cout << " Masukkan Pilihan : ";
+        cout << " 3. Menampilkan data teratas (Top)" << endl;
+        cout << " 4. Menampilkan data" << endl;
+        cout << " 5. Hapus Stack" << endl;
+        cout << " 6. Keluar" << endl;
+        cout << " Masukkan pilihan: ";
         cin >> pilihan;
         cout << endl;
-
-        if(pilihan==1){
-            cout << " Masukkan data : ";
+        if (pilihan == 1)
+        {
+            cout << " Masukkan data: ";
             cin >> nilai;
             push(nilai);
         }
-        else if (pilihan==2){
+        else if (pilihan == 2)
+        {
             pop();
         }
-        else if (pilihan==3){
-            display();
+        else if (pilihan == 3)
+        {
+            showTop();
         }
-        else if (pilihan==4){
-            clear();
+        else if (pilihan == 4)
+        {
+            displayStack();
         }
-        else{
+        else if (pilihan == 5)
+        {
+            clearStack();
+        }
+        else
+        {
             return 0;
         }
         cout << endl;
         system("pause");
-    }while(pilihan !=5);
-
+    } while (pilihan != 6);
     return 0;
 }
