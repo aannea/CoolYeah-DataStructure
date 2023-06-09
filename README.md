@@ -412,3 +412,103 @@ The code you provided is an implementation of a linked list program that allows 
   - Based on the choice, the corresponding functions are called to perform the desired operations.
   - After each operation, the program pauses and clears the screen before displaying the menu again.
   - The program continues executing until the user enters an invalid choice (default case), at which point it exits.
+
+### 026_Stack.cpp
+The code you provided is an implementation of a stack program using an array. Here's a breakdown of how the code works:
+- The necessary header file, \<iostream>, is included.
+- The MAX constant is defined to represent the maximum size of the stack.
+- The stack struct is defined, representing a stack. It contains two members: an integer top to keep track of the top element's index and an integer array data to store the stack elements.
+- The initStack() function is defined to initialize the stack. It sets the top value to -1, indicating an empty stack.
+- The isEmpty() function checks whether the stack is empty by checking if the top value is -1. It returns 1 if true (empty) and 0 if false (not empty).
+- The isFull() function checks whether the stack is full by checking if the top value is equal to MAX - 1. It returns 1 if true (full) and 0 if false (not full).
+- The push() function is defined to insert an element into the stack. It first checks if the stack is empty. If so, it increments the top value and assigns the data element at the top index to the provided data. If the stack is not empty, it performs the same steps. If the stack is full, it displays a message indicating that the stack is full.
+- The pop() function is defined to remove the top element from the stack. It first checks if the stack is not empty. If so, it decrements the top value, effectively removing the top element. If the stack is empty, it displays a message indicating that the stack is empty.
+- The top() function is defined to display the top element of the stack. It checks if the stack is not empty. If so, it displays the element at the top index. If the stack is empty, it displays a message indicating that the stack is empty.
+- The display() function is defined to display all the elements in the stack. It iterates from the top element to the bottom element of the stack and displays each element.
+- The clear() function is defined to clear the stack by setting the top value to -1, effectively emptying the stack.
+- The main() function is where the menu-driven program logic is implemented:
+  - The initStack() function is called to initialize the stack.
+  - A do-while loop is used to repeatedly display the menu and perform operations until the user chooses to exit.
+  - Inside the loop, the menu options are displayed to the user.
+  - The user is prompted to enter a choice.
+  - Based on the choice, the corresponding functions are called to perform the desired operations.
+  - After each operation, the screen is cleared, and the loop continues until the user chooses to exit.
+  - When the user chooses to exit (option 6), the loop ends, and the program terminates.
+
+### 027_StackQueue.cpp
+The code you provided is an implementation of a queue program using an array. Here's a breakdown of how the code works:
+- The necessary header file, \<iostream>, is included.
+- The MAX constant is defined to represent the maximum size of the queue.
+- The queue struct is defined, representing a queue. It contains three members: an integer array data to store the queue elements, and two integers head and tail to keep track of the front and rear indices of the queue.
+- The create() function is defined to initialize the queue. It sets both head and tail values to -1, indicating an empty queue.
+- The isEmpty() function checks whether the queue is empty by checking if the tail value is -1. It returns 1 if true (empty) and 0 if false (not empty).
+- The isFull() function checks whether the queue is full by checking if the tail value is equal to MAX - 1. It returns 1 if true (full) and 0 if false (not full).
+- The enqueue() function is defined to insert an element into the queue. It first checks if the queue is empty. If so, it sets both head and tail to 0 and assigns the data element at the tail index to the provided data. If the queue is not empty, it increments the tail value and assigns the data element at the new tail index to the provided data. If the queue is full, it displays a message indicating that the queue is full.
+- The dequeue() function is defined to remove the front element from the queue. It first assigns the front element to a variable dq. It then shifts all elements in the queue to the left by one position, effectively removing the front element. Finally, it decrements the tail value and displays the removed element and a message indicating that the front of the queue has been removed. If the queue is empty, it displays a message indicating that the queue is empty.
+- The clear() function is defined to clear the queue by setting both head and tail values to -1, effectively emptying the queue.
+- The display() function is defined to display all the elements in the queue. It iterates from the front element to the rear element of the queue and displays each element.
+- The main() function is where the menu-driven program logic is implemented:
+  - The create() function is called to initialize the queue.
+  - A do-while loop is used to repeatedly display the menu and perform operations until the user chooses to exit.
+  - Inside the loop, the menu options are displayed to the user.
+  - The user is prompted to enter a choice.
+  - Based on the choice, the corresponding functions are called to perform the desired operations.
+  - After each operation, the screen is cleared, and the loop continues until the user chooses to exit.
+  - When the user chooses to exit (option 5), the loop ends, and the program terminates.
+
+### 028_StackLinkedList.cpp
+The code you provided is an implementation of a stack program using a singly linked list. Here's how the code works:
+- The necessary header file, \<iostream>, is included.
+- The struct Node is defined to represent a node in the linked list. It has two members: data to store the data value and link to point to the next node in the list.
+- The pointer top is initialized to NULL, indicating an empty stack.
+- The function isEmpty() checks whether the stack is empty by checking if the top pointer is NULL. It returns 1 if true (empty) and 0 if false (not empty).
+- The function push(int nilai) is defined to insert an element into the stack. It creates a new node (ptr), assigns the provided value (nilai) to the data member of the node, sets the link of the new node to the current top node, and updates the top pointer to point to the new node. It also displays a message indicating that the data has been inserted.
+- The function pop() is defined to remove the top element from the stack. It first checks if the stack is empty. If it is, it displays a message indicating that the stack is empty. If the stack is not empty, it creates a temporary pointer (ptr) and sets it to the current top node. It updates the top pointer to point to the next node in the list. It displays a message indicating the value of the removed data, and finally, it deletes the temporary pointer.
+- The function showTop() is defined to display the top element of the stack. It first checks if the stack is empty. If it is, it displays a message indicating that the stack is empty. If the stack is not empty, it displays the value of the data member of the top node.
+- The function clearStack() is defined to clear the stack by deleting all the nodes in the linked list. It uses two pointers, bantu and hapus, to iterate through the linked list. It starts from the top node and deletes each node until the end of the list (bantu == NULL). Finally, it sets the top pointer to NULL and displays a message indicating that the stack has been cleared.
+- The function displayStack() is defined to display all the elements in the stack. It iterates through the linked list, starting from the top node, and displays the value of each node's data member.
+- The main() function is where the menu-driven program logic is implemented:
+  - A do-while loop is used to repeatedly display the menu and perform operations until the user chooses to exit.
+  - Inside the loop, the menu options are displayed to the user.
+  - The user is prompted to enter a choice.
+  - Based on the choice, the corresponding functions are called to perform the desired operations.
+  - After each operation, the screen is cleared, and the loop continues until the user chooses to exit.
+  - When the user chooses to exit (option 6), the loop ends, and the program terminates.
+
+### 029_StackReversString.cpp
+The code you provided is an implementation of a program that reverses a given string using a stack. Here's how the code works:
+- The necessary header files, \<iostream> and <string.h>, are included.
+- The struct Tumpukan is defined to represent a stack. It has two members: atas to keep track of the top index of the stack and kalimat to store the characters of the string.
+- The function masukan(char x) is defined to insert a character into the stack. It first checks if the stack is full (T.atas == max). If it is, it displays a message indicating that the stack is already full. If the stack is not full, it increments T.atas and assigns the provided character x to T.kalimat[T.atas].
+- The function ambil() is defined to remove and return the top character from the stack. It first checks if the stack is empty (T.atas == 0). If it is, it displays a message indicating that the stack is empty and returns a space character ' '. If the stack is not empty, it assigns the top character T.kalimat[T.atas] to hasil, decrements T.atas, and returns hasil.
+- In the main() function:
+  - The variable kata is declared to store the input string.
+  - The screen is cleared using system("cls").
+  - The T.atas is initialized to 0 to indicate an empty stack.
+  - The user is prompted to enter a string to be reversed using cout and gets(kata).
+  - The screen is cleared again.
+  - The original string is displayed using cout.
+  - A loop is used to push each character of the string into the stack by calling the masukan() function.
+  - Another loop is used to pop and display each character from the stack, effectively reversing the string.
+  - The program terminates with return 0.
+
+### 030_StackInfixPostfix.cpp
+The code you provided is an implementation of a program that converts an infix expression to postfix notation using a stack. Here's how the code works:
+- The necessary header files, \<iostream> and <stack>, are included.
+- Three functions are defined: IsOperator(char c), IsOperand(char c), and precedence(char op). These functions are used to check if a character is an operator, operand, or to determine the precedence of an operator.
+- The function eqlOrhigher(char op1, char op2) is defined to compare the precedence of two operators. It returns true if op1 has equal or higher precedence than op2, and false otherwise.
+- The function convert(string infix) takes an infix expression as input and converts it to postfix notation. It uses a stack to perform the conversion. The function iterates through each character of the infix expression and applies the following rules:
+  - If the character is a space, it is ignored.
+  - If the character is an opening parenthesis '(', it is pushed onto the stack.
+  - If the character is an operand, it is added to the postfix string.
+  - If the character is an operator, the stack is checked. If there are operators with higher precedence on the stack, they are popped and added to the postfix string. Then, the current operator is pushed onto the stack.
+  - If the character is a closing parenthesis ')', operators are popped from the stack and added to the postfix string until an opening parenthesis is encountered. The opening parenthesis is then popped from the stack.
+- In the main() function:
+  - Variables infix, postfix, and prefix are declared to store the input infix expression, the converted postfix expression, and an unused prefix expression, respectively.
+  - A do-while loop is used to repeatedly prompt the user for input infix expressions and convert them to postfix notation.
+  - Inside the loop, the user is prompted to enter an infix expression using cout and cin >> infix.
+  - The convert() function is called to convert the infix expression to postfix notation, and the result is stored in the postfix variable.
+  - The original infix expression and the converted postfix expression are displayed using cout.
+  - The user is prompted to enter whether they want to input another infix expression.
+  - The loop continues as long as the user enters 'y' to input another infix expression.
+- The program terminates with return 0.
