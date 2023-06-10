@@ -588,10 +588,10 @@ The code is a program that simulates a queue for a personal meet and greet event
 - The dequeue() function is used to remove the first person from the queue. If the queue is empty, a message is displayed. If the queue is not empty, the elements in the arrays are shifted to the left, tail is decremented, and nokel is incremented. The name and queue number of the dequeued person are displayed.
 - The clear() function is used to clear the queue by resetting head, tail, no, and nokel to their initial values.
 - In the main() function:
-  Variables menu and nama are declared to store the user's choice and name, respectively.
-  The create() function is called to initialize the queue.
-  A do-while loop is used to repeatedly display a menu, get the user's choice, and perform the corresponding operation.
-  Inside the loop, the user is prompted to enter their choice using cout and cin >> menu.
-  Depending on the user's choice, the corresponding function (enqueue(), dequeue(), or clear()) is called.
-  After each operation, the screen is cleared using system("cls"), and the loop continues until the user enters 4 to exit the program.
+  - Variables menu and nama are declared to store the user's choice and name, respectively.
+  - The create() function is called to initialize the queue.
+  - A do-while loop is used to repeatedly display a menu, get the user's choice, and perform the corresponding operation.
+  - Inside the loop, the user is prompted to enter their choice using cout and cin >> menu.
+  - Depending on the user's choice, the corresponding function (enqueue(), dequeue(), or clear()) is called.
+  - After each operation, the screen is cleared using system("cls"), and the loop continues until the user enters 4 to exit the program.
 - The program terminates with return 0.
