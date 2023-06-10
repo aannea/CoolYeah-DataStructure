@@ -367,7 +367,7 @@ This program demonstrates the implementation of a singly linked list in C++. The
   - The program exits the main() function with the return 0; statement, indicating successful program execution.
 
 ### 024_LinkedListMenu.cpp
-code you provided is an implementation of a menu-driven program that allows users to interact with the linked list. Here's a breakdown of how the code works:- 
+This code is an implementation of a menu-driven program that allows users to interact with the linked list. Here's a breakdown of how the code works:- 
 - The necessary header file, \<iostream>, is included.
 - The using namespace std; directive is used to avoid having to prefix standard library elements with std::.
 - The Node struct is defined, representing a node in the linked list. It contains an integer data and a pointer next to the next node.
@@ -395,7 +395,7 @@ code you provided is an implementation of a menu-driven program that allows user
 - The program returns 0 to indicate successful execution.
 
 ### 025_LinkedListMenuStudent.cpp
-The code you provided is an implementation of a linked list program that allows users to input, add, delete, and display data in the list. Here's a breakdown of how the code works:
+The code is an implementation of a linked list program that allows users to input, add, delete, and display data in the list. Here's a breakdown of how the code works:
 - The necessary header file, \<iostream>, is included.
 - The Node struct is defined, representing a node in the linked list. It contains a string nama, an integer nim, and a pointer next to the next node.
 - Global variables head, tail, bantu, newNode, del, pilih, and out are declared. These variables will be used to manage the linked list and user input.
@@ -414,7 +414,7 @@ The code you provided is an implementation of a linked list program that allows 
   - The program continues executing until the user enters an invalid choice (default case), at which point it exits.
 
 ### 026_Stack.cpp
-The code you provided is an implementation of a stack program using an array. Here's a breakdown of how the code works:
+The code is an implementation of a stack program using an array. Here's a breakdown of how the code works:
 - The necessary header file, \<iostream>, is included.
 - The MAX constant is defined to represent the maximum size of the stack.
 - The stack struct is defined, representing a stack. It contains two members: an integer top to keep track of the top element's index and an integer array data to store the stack elements.
@@ -436,7 +436,7 @@ The code you provided is an implementation of a stack program using an array. He
   - When the user chooses to exit (option 6), the loop ends, and the program terminates.
 
 ### 027_StackQueue.cpp
-The code you provided is an implementation of a queue program using an array. Here's a breakdown of how the code works:
+The code is an implementation of a queue program using an array. Here's a breakdown of how the code works:
 - The necessary header file, \<iostream>, is included.
 - The MAX constant is defined to represent the maximum size of the queue.
 - The queue struct is defined, representing a queue. It contains three members: an integer array data to store the queue elements, and two integers head and tail to keep track of the front and rear indices of the queue.
@@ -457,7 +457,7 @@ The code you provided is an implementation of a queue program using an array. He
   - When the user chooses to exit (option 5), the loop ends, and the program terminates.
 
 ### 028_StackLinkedList.cpp
-The code you provided is an implementation of a stack program using a singly linked list. Here's how the code works:
+The code is an implementation of a stack program using a singly linked list. Here's how the code works:
 - The necessary header file, \<iostream>, is included.
 - The struct Node is defined to represent a node in the linked list. It has two members: data to store the data value and link to point to the next node in the list.
 - The pointer top is initialized to NULL, indicating an empty stack.
@@ -476,7 +476,7 @@ The code you provided is an implementation of a stack program using a singly lin
   - When the user chooses to exit (option 6), the loop ends, and the program terminates.
 
 ### 029_StackReversString.cpp
-The code you provided is an implementation of a program that reverses a given string using a stack. Here's how the code works:
+The code is an implementation of a program that reverses a given string using a stack. Here's how the code works:
 - The necessary header files, \<iostream> and <string.h>, are included.
 - The struct Tumpukan is defined to represent a stack. It has two members: atas to keep track of the top index of the stack and kalimat to store the characters of the string.
 - The function masukan(char x) is defined to insert a character into the stack. It first checks if the stack is full (T.atas == max). If it is, it displays a message indicating that the stack is already full. If the stack is not full, it increments T.atas and assigns the provided character x to T.kalimat[T.atas].
@@ -493,8 +493,8 @@ The code you provided is an implementation of a program that reverses a given st
   - The program terminates with return 0.
 
 ### 030_StackInfixPostfix.cpp
-The code you provided is an implementation of a program that converts an infix expression to postfix notation using a stack. Here's how the code works:
-- The necessary header files, \<iostream> and <stack>, are included.
+The code is an implementation of a program that converts an infix expression to postfix notation using a stack. Here's how the code works:
+- The necessary header files, \<iostream> and \<stack>, are included.
 - Three functions are defined: IsOperator(char c), IsOperand(char c), and precedence(char op). These functions are used to check if a character is an operator, operand, or to determine the precedence of an operator.
 - The function eqlOrhigher(char op1, char op2) is defined to compare the precedence of two operators. It returns true if op1 has equal or higher precedence than op2, and false otherwise.
 - The function convert(string infix) takes an infix expression as input and converts it to postfix notation. It uses a stack to perform the conversion. The function iterates through each character of the infix expression and applies the following rules:
@@ -511,4 +511,87 @@ The code you provided is an implementation of a program that converts an infix e
   - The original infix expression and the converted postfix expression are displayed using cout.
   - The user is prompted to enter whether they want to input another infix expression.
   - The loop continues as long as the user enters 'y' to input another infix expression.
+- The program terminates with return 0.
+
+### 031_QueueArray.cpp
+The code is an implementation of a program that simulates a queue using an array. Here's how the code works:
+- The necessary header file, \<iostream>, is included.
+- The constant MAX is defined to represent the maximum size of the queue.
+- A structure queue is defined to represent the queue. It contains an array data to store the queue elements, and head and tail to represent the indices of the front and rear of the queue.
+- The create() function initializes the queue by setting head and tail to -1.
+- The isEmpty() function checks if the queue is empty by checking if tail is -1.
+- The isFull() function checks if the queue is full by checking if tail is equal to MAX - 1.
+- The enqueue(int data) function is used to insert an element into the queue. It first checks if the queue is empty. If it is, it sets head and tail to 0 and inserts the element at the tail index. If the queue is not full, it increments tail and inserts the element at the new tail index. If the queue is full, it displays a message indicating that the queue is already full.
+- The dequeue() function is used to remove an element from the front of the queue. It first assigns the value of the element at the head index to a variable dq. Then it shifts all the elements in the queue to the left by one position, effectively removing the front element. Finally, it decrements tail and displays a message indicating that the front element has been removed.
+- The clear() function is used to clear the queue by resetting head and tail to -1.
+- The display() function is used to display the elements in the queue. It iterates from head to tail and displays each element.
+- In the main() function:
+  - Variables pil and data are declared to store the user's choice and the data to be enqueued, respectively.
+  - The create() function is called to initialize the queue.
+  - A do-while loop is used to repeatedly display a menu, get the user's choice, and perform the corresponding operation.
+  - Inside the loop, the user is prompted to enter their choice using cout and cin >> pil.
+  - Depending on the user's choice, the corresponding function (enqueue(), dequeue(), display(), or clear()) is called.
+  - After each operation, the screen is cleared using system("cls"), and the loop continues until the user enters 5 to exit the program.
+- The program terminates with return 0.
+
+### 032_QueueLinkedList.cpp
+The code is an implementation of a program that simulates a queue using a linked list. Here's how the code works:
+- The necessary header file, \<iostream>, is included.
+- A structure antrian is defined to represent each element of the queue. It contains an integer data and a pointer next to point to the next element in the queue.
+- Global variables head, tail, baru, bantu, and hapus are declared. head and tail point to the front and rear of the queue, respectively. baru is used to create a new element. bantu and hapus are used for traversing and deleting elements in the queue.
+- The hitungAntrian() function is used to count the number of elements in the queue. It iterates through the queue and increments a counter for each element.
+- The isEmpty() function checks if the queue is empty by calling hitungAntrian() and checking if the count is zero.
+- The enqueue(int data) function is used to insert an element into the queue. If the queue is empty, a new element is created and assigned to head and tail. If the queue is not empty, a new element is created and appended to the end of the queue, and tail is updated.
+- The dequeue() function is used to remove an element from the front of the queue. If the queue is empty, a message is displayed. If the queue is not empty, the element pointed by head is removed by updating head and deleting the element.
+- The display() function is used to display the elements in the queue. It checks if the queue is empty and, if not, iterates through the queue and prints each element.
+- The clear() function is used to clear the queue. It checks if the queue is empty, and if not, it deletes each element in the queue by traversing through it.
+- In the main() function:
+  - Variables pil and data are declared to store the user's choice and the data to be enqueued, respectively.
+  - A do-while loop is used to repeatedly display a menu, get the user's choice, and perform the corresponding operation.
+  - Inside the loop, the user is prompted to enter their choice using cout and cin >> pil.
+  - Depending on the user's choice, the corresponding function (enqueue(), dequeue(), display(), or clear()) is called.
+  - After each operation, the screen is cleared using system("cls"), and the loop continues until the user enters 5 to exit the program.
+- The program terminates with return 0.
+
+### 033_QueueArrayDataManipulation.cpp
+The code is an updated version of the previous code. It adds additional functionality to handle a queue of names and corresponding values (scores). Here's how the updated code works:
+- The code includes the necessary header file, \<iostream>, and defines a constant MAX with a value of 5.
+- A structure queue is defined to represent the queue. It contains two arrays, nama (for names) and nilai (for values/scores), as well as head and tail variables to keep track of the front and rear of the queue.
+- The create() function initializes head and tail to -1, indicating an empty queue.
+- The isEmpty() function checks if the queue is empty by checking if tail is -1.
+- The isFull() function checks if the queue is full by comparing tail with MAX-1.
+- The enqueue(string nama, int nilai) function is used to insert an element (name and value) into the queue. If the queue is empty, head and tail are set to 0, and the name and value are stored in the corresponding arrays. If the queue is not empty and not full, tail is incremented, and the name and value are stored at the new position. If the queue is full, a message is displayed.
+- The dequeue() function is used to remove an element from the front of the queue. If the queue is empty, a message is displayed. If the queue is not empty, the elements in the arrays are shifted to the left, and tail is decremented. The name and value of the dequeued element are displayed.
+- The display() function is used to display all the elements in the queue. It checks if the queue is empty and, if not, iterates through the arrays and prints each name and value.
+- The jumlah() function calculates and displays the number of elements in the queue by iterating through the arrays and incrementing a counter.
+- The ratarata() function calculates and displays the average value of the elements in the queue by summing the values and dividing by the number of elements.
+- The jumlahtotal() function calculates and displays the total value of the elements in the queue by summing the values.
+- The clear() function is used to clear the queue by resetting head and tail to -1.
+- In the main() function:
+  - Variables pil, nama, and nilai are declared to store the user's choice, name, and value, respectively.
+  - A do-while loop is used to repeatedly display a menu, get the user's choice, and perform the corresponding operation.
+  - Inside the loop, the user is prompted to enter their choice using cout and cin >> pil.
+  - Depending on the user's choice, the corresponding function (enqueue(), dequeue(), display(), jumlah(), ratarata(), jumlahtotal(), or clear()) is called.
+  - After each operation, the screen is cleared using system("cls"), and the loop continues until the user enters 8 to exit the program.
+- The program terminates with return 0.
+
+### 034_QueueArrayMeetAndGreet.cpp
+The code is a program that simulates a queue for a personal meet and greet event. It allows users to enqueue (add) their names to the queue, dequeue (remove) the first person in the queue, and reset the queue.
+- Here's a breakdown of how the code works:
+- The code includes the necessary header file, \<iostream>, and defines a constant MAX with a value of 100.
+- A structure queue is defined to represent the queue. It contains two arrays, nama (for names) and no (for queue numbers), as well as head and tail variables to keep track of the front and rear of the queue.
+- Variables no and nokel are declared and initialized to 0. no is used to assign a unique queue number to each person, and nokel keeps track of the number of people who have been dequeued.
+- The create() function initializes head and tail to -1, indicating an empty queue.
+- The isEmpty() function checks if the queue is empty by checking if tail is -1.
+- The isFull() function checks if the queue is full by comparing tail with MAX-1.
+- The enqueue(string nama) function is used to insert a person's name into the queue. If the queue is empty, head and tail are set to 0, and the name and queue number are stored in the corresponding arrays. If the queue is not empty and not full, tail is incremented, and the name and queue number are stored at the new position. If the queue is full, a message is displayed.
+- The dequeue() function is used to remove the first person from the queue. If the queue is empty, a message is displayed. If the queue is not empty, the elements in the arrays are shifted to the left, tail is decremented, and nokel is incremented. The name and queue number of the dequeued person are displayed.
+- The clear() function is used to clear the queue by resetting head, tail, no, and nokel to their initial values.
+- In the main() function:
+  Variables menu and nama are declared to store the user's choice and name, respectively.
+  The create() function is called to initialize the queue.
+  A do-while loop is used to repeatedly display a menu, get the user's choice, and perform the corresponding operation.
+  Inside the loop, the user is prompted to enter their choice using cout and cin >> menu.
+  Depending on the user's choice, the corresponding function (enqueue(), dequeue(), or clear()) is called.
+  After each operation, the screen is cleared using system("cls"), and the loop continues until the user enters 4 to exit the program.
 - The program terminates with return 0.
