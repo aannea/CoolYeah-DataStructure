@@ -107,56 +107,40 @@ void insertTengah(string input, int posisi)
 
 void hapusDepan()
 {
-    if (isEmpty() == 0){
+    if (isEmpty() == 0) {
         hapus = head;
-        tail = head;
-        if (hapus->next == head){
+        if (head == tail) {
             head = NULL;
             tail = NULL;
-            delete hapus;
-        }
-        else{
-            while (tail->next != hapus){
-                tail = tail->next;
-            }
+        } else {
             head = head->next;
+            head->prev = tail;
             tail->next = head;
-            hapus->next = NULL;
-            delete hapus;
         }
-    }
-    else{
+        delete hapus;
+    } else {
         cout << " List masih kosong!" << endl;
     }
 }
 
 void hapusBelakang()
 {
-    if (isEmpty() == 0){
-        hapus = head;
-        tail = head;
-
-        if (hapus->next == head){
+    if (isEmpty() == 0) {
+        hapus = tail;
+        if (head == tail) {
             head = NULL;
             tail = NULL;
-            delete hapus;
-        }
-        else{
-            while (hapus->next != head){
-                hapus = hapus->next;
-            }
-            while (tail->next != hapus){
-                tail = tail->next;
-            }
+        } else {
+            tail = tail->prev;
             tail->next = head;
-            hapus->next = NULL;
-            delete hapus;
+            head->prev = tail;
         }
-    }
-    else{
+        delete hapus;
+    } else {
         cout << " List masih kosong!" << endl;
     }
 }
+
 
 void hapusTengah(int posisi)
 {
