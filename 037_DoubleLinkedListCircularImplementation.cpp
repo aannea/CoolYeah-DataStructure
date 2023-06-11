@@ -17,10 +17,7 @@ void init()
     head = NULL;
     tail = head;
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 int isEmpty()
 {
     if (head == NULL && tail == NULL)
@@ -28,10 +25,7 @@ int isEmpty()
     else
         return 0;
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 void create(string nama, int nilai)
 {
     baru = new Node;
@@ -40,10 +34,7 @@ void create(string nama, int nilai)
     baru->next = NULL;
     baru->prev = NULL;
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 void insertDepan(string nama, int nilai)
 {
     create(nama, nilai);
@@ -62,10 +53,7 @@ void insertDepan(string nama, int nilai)
         tail->next = head;
     }
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 void insertTengah(string nama, int nilai, int posisi)
 {
     create(nama, nilai);
@@ -97,10 +85,7 @@ void insertTengah(string nama, int nilai, int posisi)
         }
     }
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 void insertBelakang(string nama, int nilai)
 {
     create(nama, nilai);
@@ -119,10 +104,7 @@ void insertBelakang(string nama, int nilai)
         head->prev = tail;
     }
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 void ubahDepan(string nama, int nilai)
 {
     if (isEmpty() == 0){
@@ -133,10 +115,7 @@ void ubahDepan(string nama, int nilai)
         cout << " List masih kosong!" << endl;
     }
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 void ubahTengah(string nama, int nilai, int posisi)
 {
     if(isEmpty()==0){
@@ -162,10 +141,7 @@ void ubahTengah(string nama, int nilai, int posisi)
         cout << " List masih kosong" <<endl;
     }
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 void ubahBelakang(string nama, int nilai)
 {
     if (isEmpty() == 0){
@@ -176,10 +152,7 @@ void ubahBelakang(string nama, int nilai)
         cout << " List masih kosong!" << endl;
     }
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 void hapusDepan()
 {
     if (isEmpty() == 0){
@@ -205,10 +178,7 @@ void hapusDepan()
         cout << "List masih kosong!" << endl;
     }
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 void hapusBelakang()
 {
     if (isEmpty() == 0){
@@ -237,10 +207,7 @@ void hapusBelakang()
         cout << "List masih kosong!" << endl;
     }
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 void hapusTengah(int posisi)
 {
     if (isEmpty() == 1){
@@ -271,10 +238,7 @@ void hapusTengah(int posisi)
         }
     }
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 void tampil()
 {
     int hitung =0;
@@ -292,10 +256,7 @@ void tampil()
         cout << "List masih kosong!" << endl;
     }
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 void cari(string nama){
     bantu = head;
     int Ketemu = 0;
@@ -320,10 +281,7 @@ void cari(string nama){
         cout << " List masih kosong";
     }
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 void clearList()
 {   if (isEmpty() == 0){
         hapus = head;
@@ -338,10 +296,7 @@ void clearList()
     }
     cout << "List berhasil terhapus!" << endl;
 }
-/*
-Farhan Aryo Pangestu
-21102059
-*/
+
 int main()
 {
     init();
