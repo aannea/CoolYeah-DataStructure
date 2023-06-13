@@ -648,7 +648,7 @@ Let's go through the code step by step:
 - The display() function is used to print the contents of the linked list. It traverses the list starting from the head node and continues until it reaches the tail node. It prints the nama and nilai values of each node.
 - The main() function is the entry point of the program. It first calls the init() function to initialize the linked list. Then, it presents a menu to the user, allowing them to choose various operations on the linked list, such as inserting nodes at different positions, removing nodes, and displaying the list. The user can choose to exit the program by entering '0'.
 
-### 038_DoubleLinkedListImplementation.cpp
+### 038_DoubleLinkedListImplementation2.cpp
 The code is an implementation of a circular doubly linked list in C++. It defines a struct called Node that represents a node in the linked list. Each node contains a nama (name) field of type string, a nilai (value) field of type int, and two pointers next and prev pointing to the next and previous nodes in the list, respectively.
 - The code begins with the necessary header files and the using namespace std directive to simplify the code by avoiding the need to prepend std:: to standard library functions.
 - The Node struct is defined, which represents a node in the circular doubly linked list. It has the following members:
@@ -673,3 +673,43 @@ The code is an implementation of a circular doubly linked list in C++. It define
 - The cari(string nama) function searches for a node with the given name in the list. If the list is not empty, it starts from the head and traverses the list, comparing the name of each node with the given name. If a match is found, it displays the position of the node. If no match is found or the list is empty, it displays an appropriate message.
 - The clearList() function clears the entire list by deleting all nodes. It starts from the head and traverses the list, deleting each node and updating the next and prev pointers accordingly. Finally, it sets the head and tail pointers to NULL.
 - The main() function provides a menu-driven interface for interacting with the linked list. It repeatedly displays a menu of options and prompts the user for input. Based on the chosen option, it calls the corresponding functions to perform the desired operation on the list. The program continues to prompt for user input until the user chooses to exit.
+
+### 039_Graph.cpp
+The code represents a graph using an adjacency matrix. The graph consists of 7 nodes represented by the strings in the simpul array: "Jakarta", "Bandung", "Bekasi", "Tasikmalaya", "Semarang", "Purwokerto", and "Yogyakarta". The edges between the nodes are stored in the busur 2D array.
+Here's a breakdown of the code:
+- The simpul array holds the names of the nodes in the graph. Each element of the array represents a node.
+- The busur 2D array represents the edges between the nodes. The value busur[i][j] represents the weight of the edge between node i and node j. If busur[i][j] is 0, it indicates that there is no edge between node i and node j.
+- The tampilGraph() function is responsible for displaying the graph. It iterates over each row of the busur array and prints the names of the nodes connected to the current node along with their corresponding edge weights. It skips nodes that are not connected (edges with weight 0).
+- In the main() function, the tampilGraph() function is called to display the graph.
+
+### 040_GraphInput.cpp
+The code allows the user to create and display a matrix representation of a graph. The graph is represented using an adjacency matrix, where the nodes are represented by strings and the edges between nodes are represented by integer weights.
+Here's a breakdown of the code:
+- The variables jumlahSimpul, dataSimpul, dataBusur, and cekMatriks are declared globally.
+- The buatMatriks() function is responsible for creating the adjacency matrix. It dynamically allocates memory for the dataSimpul array and dataBusur 2D array based on the jumlahSimpul value entered by the user. Then, it prompts the user to enter the names of the nodes (dataSimpul) and the weights of the edges (dataBusur) between each pair of nodes.
+- The tampilMatriks() function is responsible for displaying the adjacency matrix. If the matrix has been created (cekMatriks is true), it prints the names of the nodes and the corresponding weights of the edges. Otherwise, it displays a message indicating that there is no matrix.
+- In the main() function, the user is prompted to enter the number of nodes (jumlahSimpul). Then, the buatMatriks() function is called to create the matrix, and the tampilMatriks() function is called to display the matrix.
+
+### 041_GraphLinkedList.cpp
+The code implements a graph data structure using a linked list representation. The graph consists of nodes (cities) connected by edges (weights between cities). The code allows the user to create and display the graph based on the number of cities and the weights between them.
+Here's a breakdown of the code:
+- The variables jumlahSimpul, dataSimpul, dataBusur, and cekMatriks are declared globally.
+- The Graph structure is defined with three fields: data (string), kanan (pointer to the next node), and kiri (pointer to the previous node).
+- Several pointers are declared globally: simpul, busur, awal, akhir, alamat, bantu, bantu2. These pointers are used to create and traverse the linked list representation of the graph.
+- The init() function initializes the awal and akhir pointers to NULL.
+- The isEmpty() function checks if the graph is empty by checking if both awal and akhir pointers are NULL. It returns 1 if the graph is empty and 0 otherwise.
+- The buatMatriks() function is responsible for creating the adjacency matrix. It is similar to the previous version of the code you provided. It prompts the user to enter the names of the cities (dataSimpul) and the weights of the edges (dataBusur) between each pair of cities.
+- The buatSimpulGraph() function creates the graph using a linked list representation. It calls the buatMatriks() function to create the adjacency matrix. Then, it iterates over the cities and creates nodes (simpul) for each city. The nodes are linked together to form a linked list. The alamat array is used to store the addresses of the first nodes of each city.
+- The tampilGraph() function displays the graph. It checks if the graph is empty and then iterates over the linked list, printing the city name (bantu->data) followed by the connected cities and their corresponding weights.
+- In the main() function, the init() function is called to initialize the graph. The user is prompted to enter the number of cities (jumlahSimpul). Then, the buatSimpulGraph() function is called to create the graph, and the tampilGraph() function is called to display the graph.
+
+### 042_GraphLinkedListInput.cpp
+The updated code includes an additional function called busurTerPendek(). This function calculates and displays the shortest edge (busur terpendek) in the graph.
+Here's a breakdown of the busurTerPendek() function:
+- The function starts by initializing variables min, i, and j to 0.
+- Two nested loops are used to iterate over the dataBusur matrix.
+- Inside the loops, the function checks if the current element dataBusur[j][i] is non-zero (indicating an edge exists) and assigns the value to min if it is the first non-zero value encountered.
+- The loops continue to iterate, updating min with the smallest non-zero value in the matrix.
+- After the loops finish, the function checks if the graph is not empty (isEmpty() == 0).
+- If the graph is not empty, the function performs a nested loop over the dataBusur matrix to find the minimum non-zero value, updating min if a smaller value is found.
+- Finally, the function prints the value of the shortest edge (min) in the graph.
