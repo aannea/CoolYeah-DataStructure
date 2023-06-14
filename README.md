@@ -713,3 +713,38 @@ Here's a breakdown of the busurTerPendek() function:
 - After the loops finish, the function checks if the graph is not empty (isEmpty() == 0).
 - If the graph is not empty, the function performs a nested loop over the dataBusur matrix to find the minimum non-zero value, updating min if a smaller value is found.
 - Finally, the function prints the value of the shortest edge (min) in the graph.
+
+### 043_DijkstraAlgorithm.cpp
+This code is an implementation of Dijkstra's algorithm to find the shortest path in a graph.
+Here's how the code works:
+- The code includes the necessary header files and declares the required variables.
+- The buatMatriks() function is defined to create the adjacency matrix for the graph. It takes input for the number of vertices, the names of the vertices, and the weights of the edges between vertices.
+- The jarakTerdekat() function implements Dijkstra's algorithm to find the shortest path. It initializes the arrays jarakDiketahui and kunjungan to keep track of the known distances and visited vertices.
+- The function sets the distance of the source vertex (simpulAsal) to 0 and marks it as visited. It then iterates until the destination vertex (simpulTujuan) is reached.
+- Inside the loop, the function updates the distances of the unvisited neighbors of the current vertex based on the edges' weights. It keeps track of the minimum distance and the corresponding vertex index.
+- After the loop, the function prints the shortest path distance from the source to the destination vertex.
+- The tampilMatriks() function is defined to display the adjacency matrix.
+- In the main() function, the user is prompted to enter the number of vertices, and then the adjacency matrix is created using buatMatriks().
+- The adjacency matrix is displayed using tampilMatriks().
+- The user is then prompted to enter the source and destination vertices to find the shortest path using jarakTerdekat().
+- The shortest path is printed, and the user is asked if they want to exit the program or continue with new inputs. If they choose to continue, the adjacency matrix is displayed again.
+- The program continues to loop until the user chooses to exit.
+
+### 044_Floyd-Warshall.cpp
+The code is a simplified version of the previous code. It allows the user to input the number of vertices, names of the vertices, and weights of the edges between them. It then creates an adjacency matrix based on the user's input and calculates the shortest path between all pairs of vertices using the Floyd-Warshall algorithm.
+Here's a breakdown of the code:
+- The necessary header files are included, and the required variables are declared. These variables include jumlahSimpul (number of vertices), dataSimpul (an array to store the names of the vertices), dataBusur (a 2D array to store the weights of the edges between vertices), jalurTerdekat (a copy of the adjacency matrix for the shortest path calculation), and cekMatriks (a boolean flag to check if the adjacency matrix is created).
+- The buatMatriks() function is defined to create the adjacency matrix. It asks the user to input the names of the vertices and the weights of the edges between them. The adjacency matrix is stored in the dataBusur array.
+- The jarakTerdekat() function implements the Floyd-Warshall algorithm to find the shortest path between all pairs of vertices. It creates a copy of the adjacency matrix (jalurTerdekat) and updates it by considering intermediate vertices. The algorithm iterates over all vertices and checks if going through an intermediate vertex results in a shorter path. If so, it updates the shortest path distance in the jalurTerdekat array. Finally, it prints the resulting adjacency matrix, displaying the shortest path distances between all pairs of vertices.
+- The tampilMatriks() function is defined to display the adjacency matrix. It simply prints the vertex names and the corresponding weights stored in the dataBusur array.
+- In the main() function, the user is prompted to enter the number of vertices. The buatMatriks() function is then called to create the adjacency matrix based on the user's input. After that, the tampilMatriks() function is called to display the adjacency matrix. Finally, the jarakTerdekat() function is called to calculate and display the shortest path distances between all pairs of vertices.
+
+### 045_DijkstraAlgorithm2.cpp
+This program is an implementation of the shortest path algorithm using Dijkstra's algorithm. It allows the user to input a graph represented by a matrix, where each entry in the matrix represents the weight of the edge between two vertices (or nodes) in the graph.
+Here's a breakdown of the program:
+- The program starts by defining several global variables, including the number of vertices (jumlahSimpul), an array to store the vertex names (dataSimpul), a 2D array to store the edge weights (dataBusur), and other variables for tracking the shortest path.
+- The buatMatriks() function allows the user to input the graph data. It prompts the user to enter the vertex names and the edge weights between vertices. The data is stored in the dataSimpul and dataBusur arrays, respectively.
+- The jarakTerdekatDi() function implements Dijkstra's algorithm to find the shortest path from a source vertex (simpulAsal) to a target vertex (simpulTujuan). It initializes the necessary arrays (jarakDiketahui and kunjungan) and iteratively finds the shortest path until the target vertex is reached. The result is displayed as the shortest distance between the source and target vertices.
+- The jarakTerdekat() function finds the shortest path between all pairs of vertices in the graph using the Floyd-Warshall algorithm. It creates a new 2D array (jalurTerdekat) to store the shortest path distances. The function iterates through all pairs of vertices and updates the shortest distances using dynamic programming. The resulting matrix is then displayed.
+- The tampilMatriks() function is used to display the graph matrix entered by the user.
+- The main() function presents a menu to the user, allowing them to choose various options. Option 1 allows the user to input the graph data, option 2 finds the shortest path between two vertices using Dijkstra's algorithm, option 3 finds the shortest path between all pairs of vertices using the Floyd-Warshall algorithm, and option 4 exits the program.
