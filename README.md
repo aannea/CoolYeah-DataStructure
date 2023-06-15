@@ -748,3 +748,73 @@ Here's a breakdown of the program:
 - The jarakTerdekat() function finds the shortest path between all pairs of vertices in the graph using the Floyd-Warshall algorithm. It creates a new 2D array (jalurTerdekat) to store the shortest path distances. The function iterates through all pairs of vertices and updates the shortest distances using dynamic programming. The resulting matrix is then displayed.
 - The tampilMatriks() function is used to display the graph matrix entered by the user.
 - The main() function presents a menu to the user, allowing them to choose various options. Option 1 allows the user to input the graph data, option 2 finds the shortest path between two vertices using Dijkstra's algorithm, option 3 finds the shortest path between all pairs of vertices using the Floyd-Warshall algorithm, and option 4 exits the program.
+
+### 046_Tree.cpp
+The code implements a binary tree data structure in C++. It defines a structure called "Pohon" to represent tree nodes, where each node contains a character data value and pointers to its left child, right child, and parent. The code includes various functions to perform operations on the binary tree, such as creating nodes, inserting nodes as left or right children, updating node values, retrieving node values, finding information about a node (parent, sibling, children), traversing the tree in pre-order, in-order, and post-order, deleting nodes or the entire tree, and calculating characteristics of the tree such as size and height.
+Here's a breakdown of the main parts of the code:
+- Structure Definition:
+  - The structure Pohon represents a node in the binary tree. It contains the following members:
+    - data: a character value to store the node's data.
+    - left, right: pointers to the left and right child nodes, respectively.
+    - parent: a pointer to the parent node.
+- Tree Initialization:
+  - The init() function initializes the root pointer to NULL, indicating an empty tree.
+- Checking if the Tree is Empty:
+  - The isEmpty() function checks if the tree is empty by verifying if the root pointer is NULL.
+- Creating a Node:
+  - The buatNode() function creates a new node with the provided data and makes it the root of the tree if the tree is empty.
+  - If the tree is not empty, it outputs a message indicating that the tree has already been created.
+- Inserting Nodes:
+  - The insertLeft() and insertRight() functions insert new nodes as the left and right children of a specified node, respectively.
+  - They perform various checks, such as ensuring the tree exists, checking if the specified node already has a left or right child, creating a new node, and updating the necessary pointers.
+  - If the operations are successful, they output messages indicating the successful addition of the new node.
+- Updating a Node:
+  - The update() function updates the value of a specified node with the provided data.
+  - It performs checks to ensure the tree exists and the specified node is valid.
+  - If the node exists, it updates the data and outputs a message indicating the successful update.
+- Retrieving Node Data:
+  - The retrieve() function retrieves and outputs the data of a specified node.
+  - It performs checks to ensure the tree exists and the specified node is valid.
+  - If the node exists, it outputs the node's data.
+- Finding Node Information:
+  - The find() function finds and outputs information about a specified node, such as its data, parent, sibling, left child, and right child.
+  - It performs checks to ensure the tree exists and the specified node is valid.
+  - If the node exists, it outputs the required information.
+- Tree Traversal:
+  - The preOrder(), inOrder(), and postOrder() functions perform pre-order, in-order, and post-order traversals of the tree, respectively.
+  - They output the data of each visited node in the specified order.
+  - These functions perform checks to ensure the tree exists before traversing.
+- Deleting Nodes and the Tree:
+  - The deleteTree() function deletes all nodes in the tree recursively.
+  - The deleteSub() function deletes a specified node and its subtree.
+  - The clear() function deletes the entire tree.
+  - These functions perform checks to ensure the tree exists and delete nodes accordingly.
+- Calculating Tree Characteristics:
+  - The size() function calculates and returns the number of nodes in the tree.
+  - The height() function calculates and returns the height of the tree.
+  - The charateristic() function outputs the size, height, and average node count per height of the tree.
+- Main Function:
+  - In the main() function, the code demonstrates the usage of the tree functions.
+  - It creates a binary tree, inserts nodes, updates node values, retrieves and finds node information, performs tree traversals, and deletes nodes.
+  - After deleting a subtree, it performs traversals again and calculates the tree characteristics.
+
+### 047_TreeLinkedList.cpp
+The code is a program that implements a binary tree using linked representation. It allows the user to perform various operations on the binary tree, such as adding nodes, updating nodes, deleting nodes, and displaying the tree in different traversal orders.
+Here's a breakdown of the code:
+- The program defines a struct called "Pohon" that represents a node in the binary tree. Each node contains a character data, pointers to the left and right child nodes, and a pointer to the parent node.
+- The program initializes the root of the tree to NULL using the "init" function and provides functions to check if the tree is empty and create a new node.
+- The "buatNode" function creates a new node with the given data and sets it as the root if the tree is empty.
+- The "insertLeft" and "insertRight" functions insert a new node with the given data as the left or right child of the specified node, respectively.
+- The "update" function updates the data of a node with the given data.
+- The "retrieve" function displays the elements of the tree in a recursive manner.
+- The "find" function displays information about a specific node in the tree, such as its parent, sibling, and children.
+- The "preOrder," "inOrder," and "postOrder" functions perform the respective tree traversal algorithms and display the nodes in the specified order.
+- The "deleteTree" function deletes the entire tree recursively, starting from the specified node.
+- The "deleteSub" function deletes a subtree rooted at the specified node.
+- The "clear" function deletes the entire tree by calling the "deleteTree" function on the root.
+- The "size" function returns the number of nodes in the tree, and the "height" function returns the height of the tree.
+- The "charateristic" function displays the size and height of the tree.
+- The "menu" function displays the main menu options.
+- The "menu2" function displays the options for viewing the tree.
+- The "menuhapus" function displays the options for deleting nodes from the tree.
+- The "main" function is the entry point of the program, where the user can interact with the binary tree by selecting different menu options.
